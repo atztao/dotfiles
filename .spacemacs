@@ -1,1 +1,0 @@
-/home/zhangtao/.spacemacs
