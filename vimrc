@@ -1,5 +1,15 @@
+" .vimrc -- ztao1991's vim initialization file
+"
+" Copyright (c) 2010-2017 Zhang Tao
+"
+" Athor:Zhang Tao
+" Email:ztao1991@gmail.com
+" Gtihub:github.com/ztao1991
+" Version:v2017.5.11
+
+
 "startup
-"--------------------
+"-----------------------------------------------
 language messages C
 set shortmess+=atI
 set t_Co=256 
@@ -105,8 +115,6 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdcommenter'
 "Plugin 'mbbill/undotree'
 Plugin 'mileszs/ack.vim'
-Plugin 'dyng/ctrlsf.vim'
-"Plugin 'Lokaltog/vim-powerline'
 Plugin 'SuperTab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'honza/vim-snippets'
@@ -128,11 +136,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'python-mode/python-mode'
 Plugin 'Voom'
-
+Plugin 'guns/xterm-color-table.vim'
 "Plugin 'Yggdroot/indentLine'
 "Plugin 'Shougo/vimshell.vim'
 "Plugin 'Shougo/vimproc.vim'
 Plugin 'terryma/vim-expand-region'
+Plugin 'altercation/vim-colors-solarized'
 
 "--------------------------------------------------------------
 " All of your Plugins must be added before the following line
@@ -153,10 +162,11 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "------------------
 "colors themes
 "------------------
-colorscheme desert
-set background =dark
+"colorscheme desert
+colorscheme elflord
+"set background =dark
 
-"colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow-Night-Bright
 hi CursorLine cterm=Underline ctermbg=NONE ctermfg=None
 "syntax on
 
@@ -180,7 +190,7 @@ let g:vim_markdown_folding_style_pythonic = 1
 let vim_markdown_preview_browser='google-chrome'
 let g:vim_markdown_toc_autofit = 1
 let vim_markdown_preview_temp_file=1
-au BufRead,BufNewFile *.txt,*.mk,*.md set filetype=markdown
+au BufRead,BufNewFile *.mk,*.md set filetype=markdown
 "let vim_markdown_preview_toggle=2
 
 autocmd BufEnter *.md exe 'noremap <F5> :!/usr/bin/google-chrome %:p<CR>'
@@ -231,7 +241,7 @@ let g:NERDTrimTrailingWhitespace = 1
 "--------------------
 "powerline
 "--------------------
-"let g:Powerline_symbols = 'fancy'
+"let g:airline_theme='simple'"
 
 "--------------------
 "vim-airline
@@ -422,17 +432,17 @@ set fillchars=vert:│
 
 "status
 "let s:hidden_all = 0
-set laststatus=1
+set laststatus=2
 set statusline=
 
 "set statusline=[%n]%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 "set statusline=%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 "hi Normal ctermfg=Black ctermbg=White guifg=White guibg=Black
-hi Search ctermfg=Black ctermbg=226_Yellow1 cterm=bold
+hi Search ctermfg=8 ctermbg=226_Yellow1 cterm=bold
 
-hi VertSplit ctermbg=Green ctermfg=Black guibg=white guifg=red 
-hi StatusLine cterm=bold,underline ctermbg=Black ctermfg=Green guibg=white guifg=red
-hi StatusLineNC cterm=bold,underline ctermbg=black ctermfg=Green guibg=black guifg=red
+hi VertSplit ctermbg=White ctermfg=Black guibg=white guifg=red 
+hi StatusLine cterm=bold,underline ctermbg=Black ctermfg=darkGrey guibg=white guifg=red
+hi StatusLineNC cterm=bold,underline ctermbg=black ctermfg=darkGrey guibg=black guifg=red
 "hi Visual ctermbg=Black ctermfg=AntiqueWhite1
 "hi SpellBad ctermfg=white ctermbg=white guifg=#yyyyyy guibg=#zzzzzz
 "hi SpellCap ctermfg=white ctermbg=white guifg=#yyyyyy guibg=#zzzzzz
@@ -451,5 +461,3 @@ let g:syntastic_warning_symbol='⚠'
 
 let g:syntastic_check_on_open=0
 "let g:syntastic_check_on_wq=1
-
-
